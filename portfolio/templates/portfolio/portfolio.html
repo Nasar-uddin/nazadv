@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 {% load staticfiles %}
 
 <head>
@@ -18,30 +18,29 @@
 <body>
 
     <!-- Start of the navbar -->
-
     <nav class="white">
         <div class="container">
             <div class="nav-wrapper">
                 <a href="{% url 'home' %}" class="brand-logo">
                     <img src="{% static 'img/logo.png' %}" width="150" alt="logo">
                 </a>
-                <ul class="right hide-on-med-and-down small-dash pl-2">
+                <ul class="left hide-on-med-and-down small-dash- pr-2">
                     <li><a href="#"><i class="fab fa-1x fa-instagram"></i></a></li>
                     <li><a href="#"><i class="fab fa-1x fa-facebook-square"></i></a></li>
                     <li><a href="#"><i class="fab fa-1x fa-linkedin"></i></a></li>
                 </ul>
-                <ul id="nav-mobile" class="right hide-on-med-and-down pr-2">
+                <ul id="nav-mobile" class="left hide-on-med-and-down pl-2">
                     <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="#">About us</a></li>
+                    <li><a href="{% url 'aboutus' %}">About us</a></li>
                     <li><a href="{% url 'service' %}">Services</a></li>
                     <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
                     <li><a href="{% url 'contact' %}">Contact us</a></li>
-
+                    
                 </ul>
             </div>
         </div>
     </nav>
-<!-- End of the navbar -->
+    <!-- End of the navbar -->
 
 <!-- Start of the banner section -->
 <div class="row banner portfolio section-padding-a">
@@ -81,7 +80,7 @@
                     <h4 class="heading-two">נשמח לשמוע על הפרויקט החדש שלך</h4>
                 </div>
                 <div class="col l3">
-                    <button class="my-btn">התחל פרויקט חדש<i class="fas fa-1x fa-long-arrow-alt-left mr-1"></i></button>
+                    <a href="{% url 'contact' %}" class="my-btn">התחל פרויקט חדש<i class="fas fa-1x fa-long-arrow-alt-left mr-1"></i></a>
                 </div>
             </div>
         </div>
@@ -90,59 +89,59 @@
 <!-- End new project -->
 
 <!-- Start of the footer section -->
-<footer class="bgm-dark">
-    <div class="container">
-        <div class="row section-padding-a">
-            <div class="col l3 right right-align">
-                <a href="{% url 'home' %}">
-                    <img src="{% static 'img/logo.png' %}" width="180" class="responsive-img" alt="">
-                </a>
-                <p>From the world's most trusted businesses to breakout startups, we help create the brand experiences of the future through a creative culture rooted in entrepreneurship and partner collaboration.</p>
-                <span class="right social-icons">
-                    <a href="#">
-                        <i class="fab fa-1x fa-linkedin"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fab fa-1x fa-twitter"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fab fa-1x fa-instagram"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fab fa-1x fa-facebook-f"></i>
-                    </a>
-                </span>
-            </div>
-            <div class="col l3 right right-align">
-                <h6 class="footer-heading mb-2">CONTACT INFO</h6>
-                <p class="mt-1">Creative Nuts Studio 202/B, 18th C Main Rd, HAL 2nd Stage, Kodihalli, Bengaluru, Karnataka 560008</p>
-                <p class="mt-1">
-                    Email: email@gmail.com<br/>
-                    Phone: 012 012 103030<br/>
-                    <a href="#" class="footer-link">View direction</a>
-                </p>
-            </div>
-            <div class="col l3 right right-align">
-                <h6 class="footer-heading mb-2">ADDITIONAL LINKS</h6>
-                <a href="#" class="footer-link">Brand Strategy</a>
-                <a href="#" class="footer-link">Brand Identity</a>
-                <a href="#" class="footer-link">Digital Marketing</a>
-                <a href="#" class="footer-link">Website Design & Development</a>
-                <a href="#" class="footer-link">Design Communication</a>
-                <a href="#" class="footer-link">Video Production</a>
-            </div>
-        </div>
-    </div>
-    <div class="bottom-footer bgm-light-dark">
+    <footer class="bgm-dark">
         <div class="container">
-            <div class="row section-padding-a-min">
-                <div class="col l12">
-                    <span class="footer-p">© 2020 All rights reserved by Creative Nuts</span>
+            <div class="row section-padding-a">
+                <div class="col l3 right right-align">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'img/logo.png' %}" width="180" class="responsive-img" alt="">
+                    </a>
+                    <p>From the world's most trusted businesses to breakout startups, we help create the brand experiences of the future through a creative culture rooted in entrepreneurship and partner collaboration.</p>
+                    <span class="right social-icons">
+                        <a href="#">
+                            <i class="fab fa-1x fa-linkedin"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-1x fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-1x fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-1x fa-facebook-f"></i>
+                        </a>
+                    </span>
+                </div>
+                <div class="col l3 right right-align">
+                    <h6 class="footer-heading mb-2">CONTACT INFO</h6>
+                    <p class="mt-1">Creative Nuts Studio 202/B, 18th C Main Rd, HAL 2nd Stage, Kodihalli, Bengaluru, Karnataka 560008</p>
+                    <p class="mt-1">
+                        Email: email@gmail.com<br/>
+                        Phone: 012 012 103030<br/>
+                        <a href="#" class="footer-link">View direction</a>
+                    </p>
+                </div>
+                <div class="col l3 right right-align">
+                    <h6 class="footer-heading mb-2">ADDITIONAL LINKS</h6>
+                    <a href="#" class="footer-link">Brand Strategy</a>
+                    <a href="#" class="footer-link">Brand Identity</a>
+                    <a href="#" class="footer-link">Digital Marketing</a>
+                    <a href="#" class="footer-link">Website Design & Development</a>
+                    <a href="#" class="footer-link">Design Communication</a>
+                    <a href="#" class="footer-link">Video Production</a>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+        <div class="bottom-footer bgm-light-dark">
+            <div class="container">
+                <div class="row section-padding-a-min">
+                    <div class="col l12">
+                        <span class="footer-p">© 2020 All rights reserved by Creative Nuts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 <!-- End of the footer section -->
 
     <script src="js/materialize.js"></script>

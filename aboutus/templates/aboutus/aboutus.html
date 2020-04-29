@@ -16,7 +16,7 @@
 </link>
 
 <body>
-    <!-- Start of the navbar -->
+<!-- Start of the navbar -->
     <nav class="white">
         <div class="container">
             <div class="nav-wrapper">
@@ -39,62 +39,78 @@
             </div>
         </div>
     </nav>
-    <!-- End of the navbar -->
-    <!-- Start of the say hello section -->
-    <div class="container">
-        <div class="row section-padding-a-max">
-            <div class="col l8 offset-l2 center">
-                <h1 class="heading-large">{{contactText.heading}}</h1>
-                <p class="paragraph-small">{{contactText.subheading}}</p>
-                <button class="my-btn-primary">info@nazadv.com</button>
-            </div>
+<!-- End of the navbar -->
+<!-- Start of the banner section -->
+    <div class="row banner about-us section-padding-a">
+        <div class="col l12">
+            <h2 class="center title">עלינו</h2>
         </div>
     </div>
+<!-- End of the banner section -->
 
-    <!-- End of the say hello section -->
-
-    <!-- Start of contacts section -->
-    <div class="bgm-dark">
-        <div class="row flex">
-            <div class="col l6 pa-0">
-                <div id="map"></div>
+<!-- Start of the service section -->
+    <div class="container">
+        <div class="row section-padding-a flex flex-center">
+            <div class="col l5 ml-0" data-aos="fade-up">
+                <img class="responsive-img img-rounded" src="{{about_us_text.image_900x650.url}}" alt="">
             </div>
-            <div class="col l6">
-                <div class="row">
-                    <div class="col l6 bgm-light-dark" data-aos="fade-up">
-                        <div class="center white-text section-padding-a">
-                            <i class="fas fa-2x fa-map-marked-alt"></i>
-                            <h6 class="heading-small">כתובת איש קשר</h6>
-                            <p class="paragraph-small">2 / B, שלב ראשון, שלב מרובה, קודיאלי, בנגלור, קרנטקה</p>
-                        </div>
-                    </div>
-                    <div class="col l6" data-aos="fade-up">
-                        <div class="center white-text section-padding-a">
-                            <i class="fas fa-2x fa-comments"></i>
-                            <h6 class="heading-small">כתובת איש קשר</h6>
-                            <p class="paragraph-small">2 / B, שלב ראשון, שלב מרובה, קודיאלי, בנגלור, קרנטקה</p>
-                        </div>
-                    </div>
-                    <div class="col l6" data-aos="fade-up">
-                        <div class="center white-text section-padding-a">
-                            <i class="fas fa-2x fa-envelope-open"></i>
-                            <h6 class="heading-small">כתובת איש קשר</h6>
-                            <p class="paragraph-small">2 / B, שלב ראשון, שלב מרובה, קודיאלי, בנגלור, קרנטקה</p>
-                        </div>
-                    </div>
-                    <div class="col l6 bgm-light-dark" data-aos="fade-up">
-                        <div class="center white-text section-padding-a">
-                            <i class="fas fa-2x fa-clock"></i>
-                            <h6 class="heading-small">כתובת איש קשר</h6>
-                            <p class="paragraph-small">2 / B, שלב ראשון, שלב מרובה, קודיאלי, בנגלור, קרנטקה</p>
-                        </div>
-                    </div>
+            <div class="col l6 pull-l1" data-aos="fade-up">
+                <div class="wraper">
+                    <h4 class="heading-two">{{about_us_text.heading}}</h4>
+                    <p class="paragraph-small light-dark-text">{{about_us_text.subheading}}</p>
+                    <a href="{% url 'service' %}" class="my-btn"><i class="fas fa-1x fa-play-circle ml-1"></i>{{about_us_text.button}}</a>
                 </div>
             </div>
-
         </div>
     </div>
-    <!-- end of contacts section -->
+<!-- end of the service section -->
+
+<!-- Start of the plan section -->
+    <div class="bgm-dark">
+        <div class="container">
+            <div class="row planing flex section-padding-a">
+                {% for plan in plans %}
+                <div class="col l4" data-aos="fade-up">
+                    <h4 class="planing-heading op-50">
+                        <span class="planing-number">0{{plan.plan_number}}</span>
+                        <span>{{plan.heading}}</span>
+                    </h4>
+                    <p class="paragraph-small op-50">{{plan.subheading}}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+<!-- End of the plan section -->
+
+<!-- Start of the branding section -->
+    <div class="container section-padding-a">
+        <div class="row">
+            <h4 class="heading-one center pb-50">{{mission.heading}}</h4>
+            <div class="col l8" data-aos="fade-up">
+                <img class="responsive-img img-rounded" src="{{mission.image_one_1000x700.url}}" alt="{{mission.image_one_1000x700}}">
+            </div>
+            <div class="col l4 pl-2" data-aos="fade-up">
+                <img class="responsive-imgs w-99 img-rounded" src="{{mission.image_two_500x730.url}}" alt="{{mission.image_two_500x730}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l4" data-aos="fade-up">
+                <h4 class="heading-two">{{mission.subheading}}</h4>
+            </div>
+            <div class="col l4" data-aos="fade-up">
+                <h6 class="paragraph-small p-bold">{{mission.our_approch_heading}}</h6>
+                <p class="paragraph-small light-dark-text">{{mission.our_approch_subheading}}</p>
+            </div>
+            <div class="col l4" data-aos="fade-up">
+                <h6 class="paragraph-small p-bold">{{mission.our_mission_heading}}</h6>
+                <p class="paragraph-small light-dark-text">{{mission.our_mission_subheading}}</p>
+            </div>
+        </div>
+    </div>
+<!-- End of the branding section -->
+
+
 
 <!-- Start of the footer section -->
     <footer class="bgm-dark">
@@ -151,27 +167,6 @@
         </div>
     </footer>
 <!-- End of the footer section -->
-
-
-    <!-- google map script only for contact us page -->
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIBAmLi7H-IkVHXkrXjwMzTrgBP1IqXIw&callback=initMap">
-    </script>
-    <script>
-        function initMap() {
-            // The location of Uluru
-            var _loc = {lat: 32.7018921, lng: 35.2976923};
-            // The map, centered
-            var map = new google.maps.Map(
-                document.getElementById('map'), {zoom: 10,
-                                                center: _loc,
-                                                streetViewControl: true,
-                                                mapTypeId: google.maps.MapTypeId.ROADMAP
-                                            });
-            var marker = new google.maps.Marker({position: _loc, map: map});
-        }
-        initMap();
-    </script>
 
 
     <script src="{% static 'js/materialize.js' %}"></script>

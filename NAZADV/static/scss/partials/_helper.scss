@@ -176,6 +176,7 @@
     justify-content: center;
 }
 .my-btn-outline{
+    display: block;
     background-color: transparent;
     border: 2px solid #FFFFFF;
     box-sizing: border-box;
@@ -190,6 +191,7 @@
     }
 }
 .my-btn{
+    display: block;
     background-color: $dark;
     border: 2px solid $dark;
     box-sizing: border-box;
@@ -205,6 +207,7 @@
     }
 }
 .my-btn-primary{
+    display: block;
     background-color: $primary;
     border: 2px solid $primary;
     box-sizing: border-box;

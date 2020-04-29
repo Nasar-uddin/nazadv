@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'portfolio.apps.PortfolioConfig',
     'service.apps.ServiceConfig',
-    'contact'
+    'contact',
+    'aboutus',
 ]
 
 MIDDLEWARE = [
