@@ -32,7 +32,7 @@
                     <li><a href="#">About us</a></li>
                     <li><a href="{% url 'service' %}">Services</a></li>
                     <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="{% url 'contact' %}">Contact us</a></li>
                     
                 </ul>
             </div>
@@ -41,11 +41,11 @@
 <!-- End of the navbar -->
 
 <!-- Start of the banner section -->
-<div class="row banner services section-padding-a">
-    <div class="col l12">
-        <h2 class="center title">השירותים שלנו</h2>
+    <div class="row banner services section-padding-a">
+        <div class="col l12">
+            <h2 class="center title">השירותים שלנו</h2>
+        </div>
     </div>
-</div>
 <!-- End of the banner section -->
 
 <!-- start of the services  -->
@@ -171,6 +171,7 @@
 <!-- End of the footer section -->
 
     <script src="{% static 'js/materialize.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

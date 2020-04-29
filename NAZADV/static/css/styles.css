@@ -230,7 +230,7 @@
   transition: 0.3s;
 }
 
-.my-btn-outline:hover {
+.my-btn-outline:hover, .my-btn-outline:active {
   background-color: #ffffff;
   color: #232323;
 }
@@ -248,7 +248,7 @@
   transition: 0.3s;
 }
 
-.my-btn:hover {
+.my-btn:hover, .my-btn:active {
   background-color: #ffffff;
   border: 2px solid #232323;
   color: #232323;
@@ -267,7 +267,7 @@
   transition: 0.3s;
 }
 
-.my-btn-primary:hover {
+.my-btn-primary:hover, .my-btn-primary:active {
   background-color: #ffffff;
   color: #232323;
 }
@@ -378,7 +378,7 @@ body {
 
 @media screen and (min-width: 900px) {
   .hero-text {
-    padding-left: 12.5rem;
+    padding-right: 12.5rem;
   }
 }
 
@@ -392,7 +392,7 @@ body {
 .hero-text .hero-title::after {
   content: "";
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: -1.875rem;
   height: 0.1875rem;
   width: 12.5rem;
@@ -538,6 +538,10 @@ body {
 
 #technique-section .col.l2 {
   border-left: 1px solid rgba(35, 35, 35, 0.2);
+}
+
+#technique-section .col.l2:last-child {
+  border-left: none;
 }
 
 #technique-section .no-border {

@@ -184,7 +184,7 @@
     color: $white;
     cursor: pointer;
     transition: 0.3s;
-    &:hover{
+    &:hover,&:active{
         background-color: $white;
         color: $dark;
     }
@@ -198,7 +198,7 @@
     color: $white;
     cursor: pointer;
     transition: 0.3s;
-    &:hover{
+    &:hover,&:active{
         background-color: $white;
         border: 2px solid $dark;
         color: $dark;
@@ -213,7 +213,7 @@
     color: $white;
     cursor: pointer;
     transition: 0.3s;
-    &:hover{
+    &:hover,&:active{
         background-color: $white;
         color: $dark;
     }

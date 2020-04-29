@@ -67,7 +67,7 @@ body{
         }
     }
     @include mqmiw(900px){
-        padding-left: 12.5rem;
+        padding-right: 12.5rem;
     }
     padding-left: 1rem;
     .hero-title{
@@ -78,7 +78,7 @@ body{
         &::after{
             content: "";
             position: absolute;
-            left: 0;
+            right: 0;
             bottom: -1.875rem;
             height: 0.1875rem;
             width: 12.5rem;
@@ -207,6 +207,9 @@ body{
     }
     .col.l2{
         border-left: 1px solid rgba($dark,0.2);
+    }
+    .col.l2:last-child{
+        border-left: none;
     }
     .no-border{
         border-left: none !important;
