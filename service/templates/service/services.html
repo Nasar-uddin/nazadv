@@ -51,11 +51,9 @@
 <!-- start of the services  -->
     <div class="container section-padding-a">
         <div class="row">
-            {% for c in cover %}
-            <div class="col l12">
-                <img class="responsive-img img-rounded" src="{{c.cover.url}}" alt="">
+            <div class="col l12" data-aos="fade-up">
+                <img class="responsive-img img-rounded" src="{{cover.cover.url}}" alt="">
             </div>
-            {% endfor %}
             {% for service in service_fields %}
             <div class="col l4">
                 <div class="service-we-provide">
@@ -75,9 +73,9 @@
         <div class="container">
             <div class="row section-padding-a">
                 {%  for sc in service_categories  %}
-                <div class="col l4 center white-text sp-30">
+                <div class="col l4 center white-text sp-30" data-aos="fade-up">
                     <div class="mb-3">
-                        <img src="{{ sc.icon.url}}" alt="" width="50px" height="50px">
+                        <img src="{{ sc.icon.url}}" alt="" height="36">
                         <h6 class="heading-small mt-2">{{sc.title}}</h6>
                         {% for st in service_tag %}
                         {% if st.service_categories_id == sc.id %}
@@ -87,7 +85,6 @@
                     </div>
                 </div>
                   {% endfor %}
-
             </div>
         </div>
     </div>
@@ -97,9 +94,9 @@
 <!-- start why work with us section -->
     <div class="container">
         <div class="row section-padding-a">
-            <h4 class="center heading-one">למה לעבוד עם ארה"ב?</h4>
+            <h4 class="center heading-one">למה לעבוד עם ארה"ב</h4>
             {% for ww in why_work %}
-            <div class="col l4">
+            <div class="col l4" data-aos="fade-up">
                 <div class="img-wraper">
                     <img class="responsive-img img-rounded" src="{{ww.image.url}}" alt="">
                 </div>

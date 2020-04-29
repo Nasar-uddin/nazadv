@@ -35,7 +35,9 @@ class Category(models.Model):
 
 class Projects(models.Model):
   title = models.CharField(max_length=50)
-  category = models.ForeignKey(Category, on_delete='CASCADE')
+  category = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
+  project_description_heading = models.CharField(max_length=200,null=True)
+  project_description_subheading = models.TextField(null=True)
   image = models.ImageField(upload_to="images/")
 
   def __str__(self):

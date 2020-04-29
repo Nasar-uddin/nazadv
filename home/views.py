@@ -4,14 +4,14 @@ from .models import Slider, Service_Header, Service_Body, Projects, ProjectsImag
 # Create your views here.
 def home(request):
   slider=Slider.objects.all()
-  service_header=Service_Header.objects.all()
-  service_body = Service_Body.objects.all()
-  projects = Projects.objects.all()
-  clientquote = ClientQuote.objects.all()
+  service_header = Service_Header.objects.all()[0]
+  service_body = Service_Body.objects.all()[:3]
+  projects = Projects.objects.all()[:8]
+  clientquote = ClientQuote.objects.all()[0]
   clientbrand = ClientBrand.objects.all()
-  business = Business.objects.all()
-  technique = Technique.objects.all()
-  technique_info = Technique_Info.objects.all()
+  business = Business.objects.all()[0]
+  technique = Technique.objects.all()[:4]
+  technique_info = Technique_Info.objects.all()[0]
  
   context={
     'slider':slider,

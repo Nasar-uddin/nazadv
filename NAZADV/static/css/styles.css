@@ -218,7 +218,6 @@
 }
 
 .my-btn-outline {
-  display: block;
   background-color: transparent;
   border: 2px solid #FFFFFF;
   -webkit-box-sizing: border-box;
@@ -237,7 +236,6 @@
 }
 
 .my-btn {
-  display: block;
   background-color: #232323;
   border: 2px solid #232323;
   -webkit-box-sizing: border-box;
@@ -257,7 +255,6 @@
 }
 
 .my-btn-primary {
-  display: block;
   background-color: #F2994A;
   border: 2px solid #F2994A;
   -webkit-box-sizing: border-box;

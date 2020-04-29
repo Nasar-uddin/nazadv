@@ -67,10 +67,8 @@
    <!-- Start of the services section -->
    <div class="container section-padding-a">
      <div class="row">
-       {% for sh in service_header %}
-       <h5 class="center heading-two primary-text">{{sh.title}}</h5>
-       <h4 class="center heading-one pb-50 sp-100">{{sh.summary}}</h4>
-       {% endfor %}
+       <h5 class="center heading-two primary-text">{{service_header.title}}</h5>
+       <h4 class="center heading-one pb-50 sp-100">{{service_header.summary}}</h4>
 
        {% for sb in service_body %}
        <div class="col m4" data-aos="fade-up">
@@ -92,7 +90,7 @@
    {% for project in projects %}
    <div class="col m3">
      <div class="project-card" data-aos="fade-up">
-       <img src="{{ project.image.url}}" alt="" class="responsive-img">
+       <img src="{{ project.image.url}}" alt="{{ project.image}}" class="responsive-img">
        <div class="project-content center">
          <h5 class="project-title">
            <a href="{% url 'project_detail' project.category project.id %}" class="heading-small dark-text">
@@ -111,14 +109,12 @@
     <div class="row">
       <div>
         <h4 class="heading-one center mb-20">Clients</h4>
-        {% for cq in clientquote %}
-        <p class="center light-dark-text sp-100 pb-50">{{cq.quote}}</p>
-        {% endfor %}
+        <p class="center light-dark-text sp-100 pb-50">{{clientquote.quote}}</p>
         <div class="">
           <div class="carousel">
             {% for cb in clientbrand %}
             <div class="carousel-item">
-              <img src="{{cb.image.url}}" alt="">
+              <img src="{{cb.image.url}}" alt="{{cb.image}}">
             </div>
             {% endfor %}
           </div>
@@ -131,18 +127,16 @@
   <!-- Start of the business section -->
    
   <div class="row flex bgm-dark">
-    {% for b in business %}
     <div class="col m6 pa-0" data-aos="fade-up">
-      <img class="responsive-img" src="{{b.image.url}}" alt="">
+      <img class="responsive-img" src="{{business.image.url}}" alt="{{business.image}}">
     </div>
     <div class="col m6 flex flex-center" data-aos="fade-up">
       <div class="wrapper-vc">
-        <h3 class="business-title">{{b.title}}</h3>
-        <p class="business-subtitle">{{b.summary}}</p>
-        <button class="my-btn-outline">Start your business</button>
+        <h3 class="business-title">{{business.title}}</h3>
+        <p class="business-subtitle">{{business.summary}}</p>
+        <a href="{% url 'contact' %}" class="my-btn-outline">Start your business</a>
       </div>
     </div>
-    {% endfor %}
   </div>
   
   <!-- End of the business section -->
@@ -150,12 +144,10 @@
   <!-- Start of the technique section -->
   <div class="container section-padding-a">
     <div class="row flex" id="technique-section">
-      {% for ti in technique_info %}
       <div class="col l4 right-align">
-        <h5>{{ti.title}}</h5>
-        <span>{{ti.summary}}</span>
+        <h5>{{technique_info.title}}</h5>
+        <span>{{technique_info.summary}}</span>
       </div>
-      {% endfor %}
       {% for tech in technique %}
       <div class="col l2" data-aos="zoom-out">
         <div class="technique center">
